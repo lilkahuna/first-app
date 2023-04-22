@@ -1,0 +1,35 @@
+.linked-div{
+    position: fixed;
+    top: 0;
+    right: 0;
+
+}
+
+/*All img tags are the same*/
+img{
+    margin-top: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.781);
+    margin-right: 15px;
+    margin-left: 1px;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 50%; /* This will make the image circular */
+    transition: all 0.3s ease; /* This will add a smooth transition effect */
+}
+
+.imgs-1:hover{
+    box-shadow: 0 0 15px rgba(41, 221, 110, 0.781); /* This will add a shadow effect */
+    transform: rotate(5deg); /* This will rotate the image slightly */  
+}
+
+.imgs-2:hover{
+    box-shadow: 0 0 15px rgb(255, 3, 3); /* This will add a shadow effect */
+    transform: rotate(5deg); /* This will rotate the image slightly */  
+}
+  
+.imgs-3:hover{
+    box-shadow: 0 0 15px rgb(255, 91, 214); /* This will add a shadow effect */
+    transform: rotate(5deg); /* This will rotate the image slightly */  
+}
+
+  

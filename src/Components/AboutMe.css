@@ -1,0 +1,16 @@
+.AB-div{
+    display: flex; /* set the display property to flex */
+    justify-content: center; /* center child elements horizontally */
+    align-items: center; /* center child elements vertically */
+    height: 100vh; /* set the height of the container */
+    color: white;
+    
+}
+
+.text{
+    
+    font-size: 20px;
+    width: 50%; /* set the width of the content */
+    height: 50%; /* set the height of the content */
+    text-align: left; /* center the text horizontally within the content */
+}

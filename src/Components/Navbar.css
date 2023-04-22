@@ -1,0 +1,40 @@
+/*Get rid of all link styling*/
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar {
+    color: white;
+    background-color: rgb(34, 32, 32);
+    display: block;
+    width: 250px;
+    text-align: center;
+    float: left;
+    position: absolute;
+    top:0px;
+    bottom:0px;
+  }
+  
+.side-buttons {
+    width: 100%;
+    transition: 0.5s; 
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    white-space: normal;
+    float: none;
+    background-size: 200% auto;
+    min-height: 70px;
+    border-width: 0px;
+    text-align: center;
+    background-color: inherit;
+    color: inherit;
+}
+  
+.side-buttons:hover {
+    color: #867a7a;
+    background-color: rgb(71, 68, 68);
+    text-decoration: none;
+
+}
