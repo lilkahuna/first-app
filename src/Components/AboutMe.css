@@ -1,16 +1,51 @@
 .AB-div{
-    display: flex; /* set the display property to flex */
-    justify-content: center; /* center child elements horizontally */
-    align-items: center; /* center child elements vertically */
-    height: 100vh; /* set the height of the container */
-    color: white;
+    margin-bottom: 20px;
+    width: 600px;
+    height: fit-content;
+    border-radius: 30px;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.781);
+    transition: transform 0.3s;
+    cursor: pointer;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+    margin-right: 30px;
+    position: fixed;
+}
+
+.CS-div{
+    margin-bottom: 20px;
+    width: 600px;
+    height: fit-content; 
+    border-radius: 30px;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.781);
+    transition: transform 0.3s;
+    cursor: pointer;
+    display: inline-block;
+    bottom: 0;
+    left: 250px;
+    margin-left: 30px;
+    position: fixed;
     
 }
 
-.text{
-    
-    font-size: 20px;
-    width: 50%; /* set the width of the content */
-    height: 50%; /* set the height of the content */
-    text-align: left; /* center the text horizontally within the content */
+.CS-div:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.781);
 }
+
+.AB-div:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.781);
+}
+
+.text{
+    font-size: 21px;
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgb(238, 222, 222);
+}
+

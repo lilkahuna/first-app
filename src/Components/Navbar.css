@@ -11,7 +11,7 @@ a{
     width: 250px;
     text-align: center;
     float: left;
-    position: absolute;
+    position: fixed;
     top:0px;
     bottom:0px;
   }
