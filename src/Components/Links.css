@@ -7,12 +7,12 @@
 
 /*All img tags are the same*/
 img{
-    margin-top: 8px;
+    margin-top: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.781);
     margin-right: 15px;
     margin-left: 1px;
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 65px;
+    max-height: 65px;
     border-radius: 50%; /* This will make the image circular */
     transition: all 0.3s ease; /* This will add a smooth transition effect */
 }
