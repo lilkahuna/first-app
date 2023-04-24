@@ -1,9 +1,7 @@
 import './index.css';
 import React, { Component } from 'react';
-import Navbar from './Components/Navbar';
 import Links from './Components/Links';
-import { Routes, Route } from 'react-router-dom';
-import AboutMe from './Components/AboutMe';
+import Git from './Components/Github';
 
 //we can put all this into a class and not delcare variables by using const or var
 //declaring function for onClick
@@ -15,20 +13,12 @@ class App extends Component {
   //use this when in a class to render things.
   render() {
 
-    //We can add our own arguments to custom components 
-    //returns a function call. Then we can pass after the function call.
+    
     return (
       <>
-
-        <Navbar />
+        
         <Links />
-        
-        <Routes>
-          <Route path='/'></Route>
-          <Route path='/aboutme' element={<AboutMe />}></Route>
-        </Routes>
-        
-      
+        <Git />
         
       </>
     );

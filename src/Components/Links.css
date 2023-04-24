@@ -1,5 +1,5 @@
 .linked-div{
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
 
@@ -31,5 +31,29 @@ img{
     box-shadow: 0 0 15px rgb(255, 91, 214); /* This will add a shadow effect */
     transform: rotate(5deg); /* This will rotate the image slightly */  
 }
+ 
+.container{
+    margin: auto;
+    width: 50%;
+    margin-top: 55px;
+    text-align: center;
+}
 
-  
+.main-h{
+    background: linear-gradient(to right, #00bfff, #00a2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 45px;
+}
+
+.intro{
+    margin: auto;
+    width: 25%;
+    margin-top: 55px;
+    text-align: center;
+}
+
+.text{
+    color: white;
+    font-size: 20px;
+}
