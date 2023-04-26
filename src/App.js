@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 import Links from './Components/Links';
 import Git from './Components/Github';
 
+
 //we can put all this into a class and not delcare variables by using const or var
 //declaring function for onClick
 //classes for the main app are better than just having a main function
 class App extends Component {
 
-  
+
 
   //use this when in a class to render things.
   render() {
