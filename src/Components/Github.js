@@ -11,7 +11,12 @@ const Git = () => {
                 <h1 className='main-head'>Projects I Have Done</h1>
                 
                 <div className='project-1'>
-                    <h2 className='pro-head'>Basic Weather App</h2>
+                        <img src=''></img>
+                        <div className='project1-body'>
+                            <h2 className='pro-head'>Basic Weather App</h2>
+
+                            <p>This is a basic weather app I created in Python. It utilizes a </p>
+                        </div>
                 </div>
 
                 <div className='project-2'>
