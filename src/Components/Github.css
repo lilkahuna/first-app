@@ -17,7 +17,6 @@
 
 
 .git-div{
-    padding: 10px;
     color: white;
     display: flex;
     flex-direction: row;
@@ -42,7 +41,10 @@
     width: 200px;
     overflow: hidden;
     position: relative;
-    
+    font-size: 25px;
+    text-align: left;
+    padding:-right 5px;    
+    padding-left: 8px;
 }
 
 .project1-body{
