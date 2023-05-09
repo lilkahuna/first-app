@@ -34,7 +34,6 @@
 .project-1, .project-2{
     margin: 10px;
     margin-top: 60px;
-    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,10 +43,20 @@
     overflow: hidden;
     position: relative;
     font-size: 22px;
+    background-color:#058cda;
+    
+}
+
+.project-1{
+    text-align: center;
+    background-image: url('/public/weather.png');
+    background-position: center;
 }
 
 .project-2{
     text-align: center;
+    background-image: url('/public/excel.png');
+    background-position: center;
 }
 
 .project1-body, .project2-body{

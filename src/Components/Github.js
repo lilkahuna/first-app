@@ -11,7 +11,7 @@ const Git = () => {
                 <h1 className='main-head'>Projects I Have Done</h1>
                 
                 <a className='linked' href='https://github.com/lilkahuna/Python-Projects/tree/main/Python%20Scripts'><div className='project-1'>
-                        <img src=''></img>
+                        
                         <h1>Basic Weather App</h1>
                         
                         <div className='project1-body'>
