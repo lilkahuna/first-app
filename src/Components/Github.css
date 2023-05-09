@@ -70,6 +70,7 @@
     position: absolute;
     font-size: 18px;
     padding: 10px;
+    text-align: left;
 }
 
 .project-1:hover .project1-body{
