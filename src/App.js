@@ -19,8 +19,7 @@ class App extends Component {
       <>
         
         <Links />
-        <Git />
-        
+]        <Git />
       </>
     );
   }
