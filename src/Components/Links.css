@@ -6,7 +6,7 @@
 }
 
 /*All img tags are the same*/
-img{
+.imgs-1, .imgs-2, .imgs-3{
     margin-top: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.781);
     margin-right: 15px;
