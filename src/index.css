@@ -1,40 +1,51 @@
-body{
+body {
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: linear-gradient(to top, #09203f 0%, #24282b 100%);
+  background-image: linear-gradient(to top, #161e24 20%, #09203f 100%);
 }
 
-h1{
+
+@import url('https://fonts.googleapis.com/css2?family=Carlito&family=Playfair+Display:ital,wght@0,400;1,500&display=swap');
+
+h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
 }
 
-h2{
+h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
 }
 
-.buttons{
-  background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%);
+p {
+  font-family: 'Carlito', sans-serif;
+  font-family: 'Playfair Display', serif;
+
+}  
+.buttons {
+  background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff 51%, #ff6e7f 100%);
   margin: 20px;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   box-shadow: 0 0 20px #858282;
   border-radius: 10px;
   border-width: 0px;
 }
 
 .buttons:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
+  /* change the direction of the change here */
   color: #ffffff;
   transform: translateY(2px);
 }
- 
-.buttons:active{
+
+.buttons:active {
   transition: 0.1s;
   transform: translateY(3px);
 }

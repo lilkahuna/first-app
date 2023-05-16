@@ -1,6 +1,6 @@
 import './Github.css'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { animate__fadeInLeft, animate__fadeInUpBig, animate__fadeInRight } from 'animate.css'
+import { animate__fadeInLeft, animate__fadeInUpBig, animate__fadeInRight, animate__fadeOutUp } from 'animate.css'
 
 const Git = () => {
 
@@ -8,7 +8,7 @@ const Git = () => {
     return (
 
         <>
-            <AnimationOnScroll animateIn='animate__fadeInRight'>
+            <AnimationOnScroll animateIn='animate__fadeInRight' animateOut='animate__fadeOutUp'>
 
                 <div className='git-div'>
                     <h1 className='main-head'>Projects I Have Done</h1>
@@ -19,7 +19,7 @@ const Git = () => {
 
                         <div className='project1-body'>
                             <p>This is a basic weather app I created in Python. It utilizes a library called Custom Tkinter.
-                                This app also uses http request to access weather information</p>
+                                This app also uses http request to access weather information.</p>
                         </div>
                     </div></a>
 

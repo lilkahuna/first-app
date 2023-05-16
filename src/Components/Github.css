@@ -26,7 +26,6 @@
     margin-top: 70px;
     padding-top: 30px; 
     position: relative;
-
 }
 
 
@@ -42,8 +41,7 @@
     overflow: hidden;
     position: relative;
     font-size: 22px;
-    background-color:#058cda;
-    
+    background-color: rgb(4, 154, 223);
 }
 
 .project-1{
@@ -70,6 +68,11 @@
     font-size: 18px;
     padding: 10px;
     text-align: left;
+
+}
+
+.project2-body {
+    font-size: 17px;
 }
 
 .project-1:hover .project1-body{
