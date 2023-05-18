@@ -20,7 +20,7 @@ class App extends Component {
       <>
         <Links />
         <Git />
-        <About/>
+        <About />
         <Email />
       </>
     );

@@ -1,34 +1,58 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import './Email.css'
 
 const Email = () => {
-
-    const form = useRef();
+    
+    const form = useRef()
+    const name = useRef()
 
     const sendEmail = (e) => {
-        e.preventDefault();
+        
+        const data ={
+            name: name.current.value
+        }
 
-        emailjs.sendForm('service_e7d5rye', 'template_usqbzod', form.current, 'YlBlgsE3qya_lU-_j')
+        console.log(data?.name)
+        e.preventDefault()
+        /**emailjs.sendForm('service_e7d5rye', 'template_usqbzod', form.current, 'YlBlgsE3qya_lU-_j')
             .then((result) => {
                 console.log(result.text);
-                window.confirm("Email sent successfully")
+                window.confirm("Attempting to send email...")
             }, (error) => {
                 console.log(error.text);
-            });
-    };
+            });**/
+
+        //deletes everthing in the form
+        //e.target.reset()
+    }
 
 
     return (
         <>
-            <form ref={form} onSubmit={sendEmail}>
-                <label>Name</label>
-                <input type="text" name="user_name" />
-                <label>Email</label>
-                <input type="email" name="user_email" />
-                <label>Message</label>
-                <textarea name="message" />
-                <input type="submit" value="Send" />
-            </form>
+
+            <div className="container-1">
+                <form className="form" ref={form} onSubmit={sendEmail}>
+                    <div className="descr">Contact me</div>
+                    <div className="input">
+                        <input ref={name} name='user_name' required="" autocomplete="off" type="text"/>
+                            <label for="user_name">Name</label>
+                    </div>
+
+                    <div className="input">
+                        <input required="" autocomplete="off" name="user_email" type="text"/>
+                            <label for="user_email">E-mail</label>
+                    </div>
+
+                    <div className="input">
+                        <textarea name='message' required="" cols="30" rows="1" id="message"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+
+                    <button>Send message →</button>
+                </form>
+            </div>
+
         </>
     );
 };
