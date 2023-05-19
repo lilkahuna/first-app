@@ -13,7 +13,8 @@ const Email = () => {
             name: name.current.value
         }
 
-        console.log(data?.name)
+        console.log(data.name)
+        //stops the default action from happening
         e.preventDefault()
         /**emailjs.sendForm('service_e7d5rye', 'template_usqbzod', form.current, 'YlBlgsE3qya_lU-_j')
             .then((result) => {
@@ -49,7 +50,7 @@ const Email = () => {
                         <label for="message">Message</label>
                     </div>
 
-                    <button>Send message →</button>
+                    <button type='submit' name='submit_button'>Send message →</button>
                 </form>
             </div>
 
