@@ -1,21 +1,35 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './Email.css'
+import { doc, setDoc } from "firebase/firestore";
+import { db, fireBaseConfig } from "./firebase.js"
+
 
 const Email = () => {
     
     const form = useRef()
     const name = useRef()
+    
+    const sendEmail = async(e) => {
 
-    const sendEmail = (e) => {
-        
-        const data ={
+        const data = {
             name: name.current.value
         }
-
         console.log(data.name)
-        //stops the default action from happening
+
         e.preventDefault()
+        await setDoc(doc(db, 'website_info', 'user_names'),{
+            name: data.name,
+            
+        })
+
+
+        
+
+        
+        //stops the default action from happening
+        
+        
         /**emailjs.sendForm('service_e7d5rye', 'template_usqbzod', form.current, 'YlBlgsE3qya_lU-_j')
             .then((result) => {
                 console.log(result.text);
