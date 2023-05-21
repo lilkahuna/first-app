@@ -1,35 +1,46 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './Email.css'
 import { doc, setDoc } from "firebase/firestore";
 import { db, fireBaseConfig } from "./firebase.js"
-
+import { collection, getDocs } from  'firebase/firestore'
 
 const Email = () => {
     
     const form = useRef()
     const name = useRef()
+    const [names, setNames] = useState([])
+
+    //useable version of database data
+    useEffect(()=> {
+        getData()
+    }, [])
+
+    //runs on change of the state variable "names"
+    useEffect(() => {
+        console.log(names)
+    }, [names]);
+
+    const getData= () =>{
+        
+        const nameCollectionRef = collection(db, 'users')
+        getDocs(nameCollectionRef).then(response =>{
+            console.log(response.docs)
+            const rawNames = response.docs.map(doc =>({
+                //retrives names
+                data: doc.data(),
+                //retrives doc id
+                id: doc.id,
+            }))
+            setNames(rawNames)
+        }).catch(error => console.log('error'))
+    }
+    
     
     const sendEmail = async(e) => {
-
-        const data = {
-            name: name.current.value
-        }
-        console.log(data.name)
-
         e.preventDefault()
-        await setDoc(doc(db, 'website_info', 'user_names'),{
-            name: data.name,
-            
-        })
+        //thi retrives info from data base
 
-
-        
-
-        
-        //stops the default action from happening
-        
-        
         /**emailjs.sendForm('service_e7d5rye', 'template_usqbzod', form.current, 'YlBlgsE3qya_lU-_j')
             .then((result) => {
                 console.log(result.text);
@@ -37,11 +48,11 @@ const Email = () => {
             }, (error) => {
                 console.log(error.text);
             });**/
-
+        
         //deletes everthing in the form
         //e.target.reset()
     }
-
+    
 
     return (
         <>
