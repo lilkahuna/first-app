@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './Email.css'
-import { doc, setDoc } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 import { db, fireBaseConfig } from "./firebase.js"
 import { collection, getDocs } from  'firebase/firestore'
 
@@ -21,11 +21,10 @@ const Email = () => {
         console.log(names)
     }, [names]);
 
-    const getData= () =>{
+    const getData = () =>{
         
         const nameCollectionRef = collection(db, 'users')
         getDocs(nameCollectionRef).then(response =>{
-            console.log(response.docs)
             const rawNames = response.docs.map(doc =>({
                 //retrives names
                 data: doc.data(),
@@ -36,10 +35,20 @@ const Email = () => {
         }).catch(error => console.log('error'))
     }
     
-    
+    const sendData = () => {
+        const sendDataRef = doc(collection(db, 'users'))
+        setDoc(sendDataRef, {
+            name: name.current.value
+        }).then(response => {
+            console.log(response)
+
+        }).catch(error => {
+            console.log('error')})
+        }
+
     const sendEmail = async(e) => {
         e.preventDefault()
-        //thi retrives info from data base
+        sendData()
 
         /**emailjs.sendForm('service_e7d5rye', 'template_usqbzod', form.current, 'YlBlgsE3qya_lU-_j')
             .then((result) => {
