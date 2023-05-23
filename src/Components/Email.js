@@ -11,7 +11,6 @@ const Email = () => {
     const name = useRef()
     const [names, setNames] = useState([])
 
-    //useable version of database data
     useEffect(()=> {
         getData()
     }, [])
@@ -19,8 +18,7 @@ const Email = () => {
     //runs on change of the state variable "names"
     useEffect(() => {
         console.log(names)
-    }, [names]);
-
+    }, [names])
     const getData = () =>{
         
         const nameCollectionRef = collection(db, 'users')
@@ -61,7 +59,7 @@ const Email = () => {
         //deletes everthing in the form
         //e.target.reset()
     }
-    
+
 
     return (
         <>
