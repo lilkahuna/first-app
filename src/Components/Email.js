@@ -1,15 +1,18 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './Email.css'
-import { setDoc, doc } from "firebase/firestore";
+import { setDoc, doc, Timestamp, and } from "firebase/firestore";
 import { db, fireBaseConfig } from "./firebase.js"
 import { collection, getDocs } from  'firebase/firestore'
 
 const Email = () => {
-    
+    //using refs to get information
     const form = useRef()
     const name = useRef()
+    //makes and array of objects
     const [names, setNames] = useState([])
+    const [message, setMessage] = useState('')
+
 
     useEffect(()=> {
         getData()
@@ -60,12 +63,13 @@ const Email = () => {
         //e.target.reset()
     }
 
-
     return (
         <>
 
             <div className="container-1">
+
                 <form className="form" ref={form} onSubmit={sendEmail}>
+
                     <div className="descr">Contact me</div>
                     <div className="input">
                         <input ref={name} name='user_name' required="" autocomplete="off" type="text"/>
@@ -83,7 +87,9 @@ const Email = () => {
                     </div>
 
                     <button type='submit' name='submit_button'>Send message →</button>
+                    
                 </form>
+                
             </div>
 
         </>
