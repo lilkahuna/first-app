@@ -21,6 +21,7 @@ const Email = () => {
     useEffect(() => {
         console.log(names)
     }, [names])
+    
     const getData = () =>{
         
         const nameCollectionRef = collection(db, 'users')
@@ -37,6 +38,7 @@ const Email = () => {
     
     const sendData = () => {
         const sendDataRef = doc(collection(db, 'users'))
+        const incrementDataRef = doc(db, 'email_counter', 'email_counter')
         setDoc(sendDataRef, {
             name: name.current.value
         }).then(response => {
@@ -44,7 +46,11 @@ const Email = () => {
 
         }).catch(error => {
             console.warn('error')})
-        }
+
+        updateDoc(incrementDataRef, {
+            counter: increment(1)
+        })
+    }
 
     const sendEmail = async(e) => {
         e.preventDefault()
