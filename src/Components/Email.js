@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './Email.css'
-import { setDoc, doc, Timestamp, and } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 import { db, fireBaseConfig } from "./firebase.js"
-import { collection, getDocs } from  'firebase/firestore'
+import { collection, getDocs, updateDoc, increment } from  'firebase/firestore'
 
 const Email = () => {
     //using refs to get information
@@ -11,7 +11,6 @@ const Email = () => {
     const name = useRef()
     //makes and array of objects
     const [names, setNames] = useState([])
-    const [message, setMessage] = useState('')
 
 
     useEffect(()=> {
@@ -44,7 +43,7 @@ const Email = () => {
             console.log(response)
 
         }).catch(error => {
-            console.log('error')})
+            console.warn('error')})
         }
 
     const sendEmail = async(e) => {
