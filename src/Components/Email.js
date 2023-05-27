@@ -11,8 +11,9 @@ const Email = () => {
     const name = useRef()
     //makes and array of objects
     const [names, setNames] = useState([])
+    const [counter, setCounter] = useState(0)
 
-
+    
     useEffect(()=> {
         getData()
     }, [])
@@ -20,17 +21,26 @@ const Email = () => {
     //runs on change of the state variable "names"
     useEffect(() => {
         console.log(names)
+        console.log(counter)
     }, [names])
-    
+
     const getData = () =>{
-        
+        const counterCollectionRef = collection(db, 'email_counter')
+        getDocs(counterCollectionRef).then(response => {
+            const rawCounter = response.docs.map(doc=>({
+                counter_number: doc.data(),
+                id: doc.id
+            }))
+            setCounter(rawCounter)
+        }).catch(error=> console.log("error"))
+
         const nameCollectionRef = collection(db, 'users')
         getDocs(nameCollectionRef).then(response =>{
             const rawNames = response.docs.map(doc =>({
                 //retrives names
                 data: doc.data(),
                 //retrives doc id
-                id: doc.id,
+                id: doc.id
             }))
             setNames(rawNames)
         }).catch(error => console.log('error'))
