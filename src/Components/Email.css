@@ -9,6 +9,14 @@
     border: 1px solid #396afc;
     background: linear-gradient(to right, #005c97, #363795);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+.form-container {
+    margin-top: 25px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
 }
 
 .container-1 form .descr {
@@ -44,6 +52,7 @@ textarea {
     border-radius: none;
     width: 100%;
     resize: none;
+    
 }
 
 .input label {
@@ -110,4 +119,11 @@ textarea {
 .form button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.data {
+    position: relative;
+    color: white;
+    text-align: center;
+    bottom: 16px;
 }
