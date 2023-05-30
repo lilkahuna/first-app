@@ -77,18 +77,21 @@ const Email = () => {
             window.confirm('Please type more')
         } else {
             sendData()
-        }
 
-        /**emailjs.sendForm('service_e7d5rye', 'template_usqbzod', form.current, 'YlBlgsE3qya_lU-_j')
+            emailjs.sendForm('service_e7d5rye', 'template_usqbzod', form.current, 'YlBlgsE3qya_lU-_j')
             .then((result) => {
                 console.log(result.text);
                 window.confirm("Attempting to send email...")
             }, (error) => {
                 console.log(error.text);
-            });**/
+            });
 
-        //deletes everthing in the form
-        //e.target.reset()
+            //deletes everthing in the form
+            e.target.reset()
+        }
+
+        
+        
     }
 
     return (
