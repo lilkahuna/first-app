@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is a portfolio website created using React and several JavaScript and React libraries. The website utilizes Firebase as its database and incorporates emailjs for sending emails through the "Contact Me" form. This project marks the developer's first application.
+This is a portfolio website created using React and several JavaScript and React libraries. The website utilizes Firebase as its database and incorporates emailjs for sending emails through the "Contact Me" form.
 
 # Technologies Used
 
